@@ -1,0 +1,28 @@
+.login-form{
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #999;
+        .login-tab-menu {
+        padding: 0;
+        margin: 0; 
+            .li {
+              display: inline-block;
+              width: 50%;
+              background-color: #ccc;
+              float: left;
+                    .a {
+                        display: block;
+                        padding: 20px;
+                        text-decoration: none;
+                        text-align: center;}
+                    li.active {
+                        background-color: #fff; }
+            }
+        }
+    
+        .tab-target {
+            padding: 20px; }
+      #register {
+            display: none; }
+}

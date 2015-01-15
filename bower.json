@@ -1,0 +1,21 @@
+{
+  "name": "calk12",
+  "version": "0.0.0",
+  "authors": [
+    "RifkiAhmad <rifkiahmad.111@gmail.com>"
+  ],
+  "description": "sosial media",
+  "main": "bower",
+  "keywords": [
+    "1"
+  ],
+  "license": "MIT",
+  "homepage": "calktalk",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
