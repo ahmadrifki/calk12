@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="asset/css/roboto/web%2520fonts/roboto_regular_macroman/stylesheet.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-
-     <title>Welcome to Calk</title>
+  <meta charset="UTF-8">
+  <title>Welcome to CechCalk</title>
+  <link rel="stylesheet" href="asset/css/roboto/webfonts/roboto_regular_macroman/stylesheet.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="asset/css/normalize.css">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <script src="asset/js/login.js"></script>
 </head>
 <body>
-    
-    <div class='login-form'>
+  <div class='login-form'>
     <ul class="login-tab-menu clear">
       <li class="active"><a href="#login" onclick="tabHandler(this)">Login</a></li>
       <li><a href="#register" onclick="tabHandler(this)">Register</a></li>
     </ul>
-    <!-- Login    -->
+    <!-- Start Login Form Here   -->
     <div id="login" class="tab-target">
       <form action="userAuth.php" method="post">
         <label>
@@ -32,7 +31,7 @@
       </form>
     </div>
     
-    <!-- Register -->
+    <!-- Start Register Form Here   -->
     <div id="register" class="tab-target">
       <form action="userRegistration.php" method="post">
         <label>
@@ -51,6 +50,5 @@
       </form>
     </div>
   </div>
-    
 </body>
 </html>
