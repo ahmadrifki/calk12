@@ -1,26 +1,54 @@
-.login-form{
-	width:100%;
-	max-width: 960px;
-	margin: 0 auto;
-	
-	margin-top: 40px;
-	height: 100%;
-	min-height: 400px;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-}
-#login{
-    width: 45%;
-	float: left;
-    height: 200px;
-    box-shadow: 0 0 15px #999;
-        
-}
-#register{
-	width: 45%;
-	float: right;
-    height: 200px;
-    box-shadow: 0 0 15px #999;
-}
+.clear {
+  clear: both; }
 
+.clear:after {
+  clear: both;
+  content: '';
+  display: block; }
 
+label {
+  display: block; }
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: .3em;
+  margin-bottom: 1em; }
+
+.login-form {
+  width: 100%;
+  max-width: 340px;
+  margin: 100px auto;
+  box-shadow: 0 0 15px blue;
+
+  	.login-tab-menu {
+	    padding: 0;
+	    margin: 0; 
+			
+		> li {
+	      display: inline-block;
+	      width: 50%;
+	      background-color: #43C2FA;
+	      float: left; 
+	      	a {
+		        display: block;
+		        padding: 20px;
+		        text-decoration: none;
+		        text-align: center; }
+		    .active {
+        		background-color: #fff; }
+	   }	
+	}
+
+	.login-form .tab-target {
+    	padding: 20px; }
+  	.login-form #register {
+    	display: none; }
+ }
 

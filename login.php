@@ -15,7 +15,7 @@
       <li class="active"><a href="#login" onclick="tabHandler(this)">Login</a></li>
       <li><a href="#register" onclick="tabHandler(this)">Register</a></li>
     </ul>
-    <!-- Start Login Form Here   -->
+    <!-- Login  -->
     <div id="login" class="tab-target">
       <form action="userAuth.php" method="post">
         <label>
@@ -31,7 +31,7 @@
       </form>
     </div>
     
-    <!-- Start Register Form Here   -->
+    <!-- Register -->
     <div id="register" class="tab-target">
       <form action="userRegistration.php" method="post">
         <label>
@@ -52,3 +52,26 @@
   </div>
 </body>
 </html>
+
+// <?php
+
+// Connected Database ==>
+
+// $host='localhost';
+// $dbname='calk12';
+// $username='postgres';
+// $password='1234';
+// $port='5432';
+
+// $psql= new PDO ("pgsql:host=$host;dbname=$dbname;user=$username;password=$password");
+
+
+// eksekusi ==>
+
+// $username = $_POST['username'];
+// $password = $_POST['password'];
+
+// $query =$psql->prepare ("INSERT INTO calker (username, password) VALUES ('$username','$password')");
+// $query->execute(); 
+
+// ?>
