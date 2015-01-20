@@ -22,13 +22,19 @@
             if ($string =="" or $string == NULL) {
                 return false;}            
             
-            $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';            
-            if ( !preg_match($regex, $string)){
+        //     $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';            
+        //     if ( !preg_match($regex, $string)){
+        //         return false;}
+
+        //     return true;
+        // }
+
+
+        if ( filter_var($string==FILTER_VALIDATE_EMAIL)){
                 return false;}
 
-            return true;
-        }
-
+            return true;}
+  
 // Validation Password
         function validate_Password($string) {
             

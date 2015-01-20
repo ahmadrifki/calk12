@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="asset/css/normalize.css">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" type="text/css" href="">
   <script src="asset/js/login.js"></script>
 </head>
 <body>
@@ -17,6 +18,15 @@
     </ul>
     <!-- Login  -->
     <div id="login" class="tab-target">
+     <?php
+        if(isset($_GET['msglogin'])){
+      ?>
+        <p class="notification">
+          <?php  echo $_GET['msglogin']; ?>
+        </p>
+      <?php
+        }
+      ?>
       <form action="userAuth.php" method="post">
         <label>
           <input type="text" name='username' placeholder="Username">
@@ -26,13 +36,22 @@
         </label>
         <label>
           <input type="checkbox"> Remeber Me
-        </label>
+        </label><br>
         <input type="submit" value="Login">
       </form>
     </div>
     
     <!-- Register -->
     <div id="register" class="tab-target">
+     <?php
+        if(isset($_GET['msgregister'])){
+      ?>
+        <p class="notification">
+          <?php echo $_GET['msgregister']; ?>
+        </p>
+      <?php
+        }
+      ?>
       <form action="userRegistration.php" method="post">
         <label>
           <input type="text" name='username' placeholder="Username">
@@ -45,33 +64,16 @@
         </label>
         <label>
           <input type="checkbox"> Show Password
-        </label>
+        </label><br>
+
         <input type="submit" value="Register">
       </form>
     </div>
   </div>
 </body>
+<script>
+    var tab = window.location.href.split('#');
+    var trigger = document.querySelector(".login-tab-menu li a[href='#"+tab[1]+"']");
+    tabHandler(trigger);
+  </script>
 </html>
-
-// <?php
-
-// Connected Database ==>
-
-// $host='localhost';
-// $dbname='calk12';
-// $username='postgres';
-// $password='1234';
-// $port='5432';
-
-// $psql= new PDO ("pgsql:host=$host;dbname=$dbname;user=$username;password=$password");
-
-
-// eksekusi ==>
-
-// $username = $_POST['username'];
-// $password = $_POST['password'];
-
-// $query =$psql->prepare ("INSERT INTO calker (username, password) VALUES ('$username','$password')");
-// $query->execute(); 
-
-// ?>
