@@ -20,7 +20,9 @@ input[type='email'],
 input[type='password'] {
   width: 100%;
   padding: .3em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  box-shadow: 0 0 17px :
+  focus rgba(0, 0, 0, 3); }
 
 .login-form {
   width: 100%;
@@ -45,16 +47,35 @@ input[type='password'] {
   .login-form .tab-target {
     padding: 20px; }
   .login-form #register {
-    display: none; }
+    display: none; 
+    }
+
     .login-form #register .notification {
-      background-color: #ff2a2a;
+      background-color: #0ca3d2;
       padding: 10px;
-      color: #fff; }
+      color: #fff; 
+      text-align: center;}
   .login-form #login {
+
+  display: block;
+  border: 1px solid silver;
+  background: linear-gradient(#eee, #fff);
+  transition: all 0.3s ease-out;
+  padding: 5px;
+  color: #555;
+
     display: none; }
     .login-form #login .notification {
       background-color: #ff2a2a;
       padding: 10px;
-      color: #fff; }
+      color: #fff; 
+    text-align: center;
+
+
+    }
+    .login-form #login:focus{
+      outline: none;
+  background-position: 0 -1.7em;
+    }
 
 /*# sourceMappingURL=style.css.map */

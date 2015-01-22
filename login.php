@@ -18,15 +18,15 @@
     </ul>
     <!-- Login  -->
     <div id="login" class="tab-target">
-     <?php
-        if(isset($_GET['msglogin'])){
-      ?>
-        <p class="notification">
-          <?php  echo $_GET['msglogin']; ?>
-        </p>
-      <?php
-        }
-      ?>
+       <?php
+          if(isset($_GET['msglogin'])){
+        ?>
+          <p class="notification">
+            <?php  echo $_GET['msglogin']; ?>
+          </p>
+        <?php
+          }
+        ?>
       <form action="userAuth.php" method="post">
         <label>
           <input type="text" name='username' placeholder="Username">
@@ -43,15 +43,15 @@
     
     <!-- Register -->
     <div id="register" class="tab-target">
-     <?php
-        if(isset($_GET['msgregister'])){
-      ?>
-        <p class="notification">
-          <?php echo $_GET['msgregister']; ?>
-        </p>
-      <?php
-        }
-      ?>
+       <?php
+          if(isset($_GET['msgregister'])){
+        ?>
+          <p class="notification">
+            <?php echo $_GET['msgregister']; ?>
+          </p>
+        <?php
+          }
+        ?>
       <form action="userRegistration.php" method="post">
         <label>
           <input type="text" name='username' placeholder="Username">

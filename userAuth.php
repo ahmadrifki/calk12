@@ -6,8 +6,8 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
  $validation = new Validation();
- if($validation->validate_username($username) && 
-	$validation->validate_username($password)){
+ if($validation->validate_is_not_null($username) && 
+	$validation->validate_is_not_null($password)){
 
 		$psql= new PDO ("pgsql:host=localhost;dbname=calk12;user=postgres;password=1234");
 		$query = "SELECT username,password FROM calker WHERE username='$username' AND password='$password';";
@@ -21,9 +21,9 @@ $password = $_POST['password'];
 					else{
 				       header("location:login.php?msglogin=Login gagal#login");
 				   	}
-}
+	}
   	else{
-    	header("location:login.php?msglogin=Username dan password tidak boleh kosong#login");
+    	header("location:login.php?msglogin=Username dan password tidak boleh kosong...!#login");
   	}
 
 ?>
