@@ -3,24 +3,24 @@
   require "lib/validation/validation.php";
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5 ($_POST['password']);
 
  $validation = new Validation();
  if($validation->validate_is_not_null($username) && 
 	$validation->validate_is_not_null($password)){
 
 		$psql= new PDO ("pgsql:host=localhost;dbname=calk12;user=postgres;password=1234");
-		$query = "SELECT username,password FROM calker WHERE username='$username' AND password='$password';";
+		$query = "SELECT * FROM calker WHERE username='$username' AND password='$password';";
 
 		$load = $psql->query($query);
 		$row = $load->rowcount();
 
 		if ($row){
-			echo "Welcome To Your Dashboard";
+			header("location:user/dasboard.php");
 				  }
-					else{
+				else{
 				       header("location:login.php?msglogin=Login gagal#login");
-				   	}
+				  }
 	}
   	else{
     	header("location:login.php?msglogin=Username dan password tidak boleh kosong...!#login");

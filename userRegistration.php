@@ -9,17 +9,18 @@ $password = $_POST['password'];
 $validation = new Validation();
 
 	if ($validation->validate_username($username)&& $validation->validate_Email($email)
-		 AND $validation->validate_Password($password)){
+		 && $validation->validate_Password($password)){
 				header("location:login.php?msgregister=Register Sukses...  :D#register");
+
+			$psql= new PDO ("pgsql:host=localhost;dbname=calk12;user=postgres;password=1234");
+
+			$password = md5($password);
+			$query =$psql->prepare ("INSERT INTO calker (username, password) VALUES ('$username','$password')");
+			$query->execute();
 		}
 		else { header("location:login.php?msgregister=Data Kurang Valit silahkan Ulangi Kembali..!#register");
 		}
 
-			$psql= new PDO ("pgsql:host=localhost;dbname=calk12;user=postgres;password=1234");
 			
-			$password = md5($password);
-			$query =$psql->prepare ("INSERT INTO calker (username, password) VALUES ('$username','$password')");
-
-			$query->execute();
 		
 ?>

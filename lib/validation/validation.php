@@ -10,7 +10,7 @@
             if (strlen($string)<3 or strlen($string)>20) {
                 return false;} 
 
-            if ( !preg_match('/^[A-Za-z][A-Za-z0-9]{5,31}$/', $string) ){
+            if ( !preg_match('/^[A-Za-z][A-Za-z0-9]{3,20}$/', $string) ){
                 return false;}
             
             return true;

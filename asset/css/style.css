@@ -47,35 +47,19 @@ input[type='password'] {
   .login-form .tab-target {
     padding: 20px; }
   .login-form #register {
-    display: none; 
-    }
-
+    display: none; }
     .login-form #register .notification {
       background-color: #0ca3d2;
       padding: 10px;
       color: #fff; 
       text-align: center;}
   .login-form #login {
-
-  display: block;
-  border: 1px solid silver;
-  background: linear-gradient(#eee, #fff);
-  transition: all 0.3s ease-out;
-  padding: 5px;
-  color: #555;
-
-    display: none; }
+     display: none; }
     .login-form #login .notification {
       background-color: #ff2a2a;
       padding: 10px;
       color: #fff; 
     text-align: center;
-
-
-    }
-    .login-form #login:focus{
-      outline: none;
-  background-position: 0 -1.7em;
     }
 
 /*# sourceMappingURL=style.css.map */
